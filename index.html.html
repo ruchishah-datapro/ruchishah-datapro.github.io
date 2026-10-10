@@ -1,0 +1,246 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Ruchi Shah</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one left-aligned column; the impact section is styled as a query result, the experience as a dated log. */
+:root{
+  --bg:#f3f5f4; --surface:#ffffff; --fg:#14201c; --muted:#56655f; --line:#d5ddd9;
+  --accent:#1f6f5c; --accent-soft:#e2efea; --pos:#1f6f5c;
+  --display:"Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+  --body:"IBM Plex Sans", "Segoe UI", Helvetica, Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0e1412; --surface:#151d1a; --fg:#e4ebe8; --muted:#97a8a1; --line:#2a3632;
+  --accent:#72c9ae; --accent-soft:#1c2e28; --pos:#72c9ae; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0e1412; --surface:#151d1a; --fg:#e4ebe8; --muted:#97a8a1; --line:#2a3632;
+  --accent:#72c9ae; --accent-soft:#1c2e28; --pos:#72c9ae; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.6;padding-inline:clamp(16px,5vw,48px)}
+.wrap{max-width:960px;margin:0 auto;padding-block:56px 72px;display:grid;gap:72px}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.1}
+h2{font-size:1.6rem;font-weight:700}
+.label{font-family:var(--mono);font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+section{display:grid;gap:24px}
+.sec-head{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:10px}
+
+/* Hero */
+.hero{display:grid;gap:22px}
+.hero h1{font-size:clamp(2.6rem,7vw,4.6rem);font-weight:700;letter-spacing:-.02em}
+.role{font-family:var(--mono);font-size:.95rem;color:var(--accent)}
+.lede{max-width:62ch;font-size:1.12rem;margin:0}
+.links{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.btn{font:500 .92rem var(--body);display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:6px;border:1px solid var(--line);background:var(--surface);color:var(--fg);text-decoration:none;cursor:pointer}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+.btn:hover{border-color:var(--accent)}
+.email{font-family:var(--mono);font-size:.9rem;color:var(--muted);user-select:all}
+
+/* Query result */
+.query{background:var(--surface);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.query pre{margin:0;padding:14px 18px;font:400 .85rem/1.55 var(--mono);color:var(--muted);border-bottom:1px solid var(--line);overflow-x:auto}
+.query pre b{color:var(--accent);font-weight:500}
+.tbl{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:.95rem}
+th,td{text-align:left;padding:11px 18px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font:500 .74rem var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:var(--accent-soft)}
+tr:last-child td{border-bottom:0}
+td.num{font-family:var(--mono);font-variant-numeric:tabular-nums;color:var(--pos);font-weight:500;white-space:nowrap}
+td.co{color:var(--muted);white-space:nowrap}
+.rows{font:400 .78rem var(--mono);color:var(--muted);padding:9px 18px;border-top:1px solid var(--line)}
+
+/* Experience log */
+.log{display:grid;gap:0}
+.job{display:grid;grid-template-columns:150px 1fr;gap:8px 28px;padding-block:24px;border-bottom:1px solid var(--line)}
+.job:first-child{padding-top:4px}
+.job:last-child{border-bottom:0}
+.when{font-family:var(--mono);font-size:.82rem;color:var(--muted);font-variant-numeric:tabular-nums;padding-top:4px}
+.job>div{min-width:0}
+.job h3{font-size:1.2rem;font-weight:700}
+.where{color:var(--muted);font-size:.95rem;margin:2px 0 10px}
+.job ul{margin:0;padding-left:1.1em;display:grid;gap:6px;max-width:68ch}
+
+/* Skills */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px}
+.skills div{min-width:0}
+.skills h3{font:500 .78rem var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips span{font-size:.88rem;padding:3px 10px;border:1px solid var(--line);border-radius:999px;background:var(--surface)}
+
+/* Education */
+.edu{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px}
+.edu ul{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.edu strong{display:block;font-weight:600}
+.edu small{color:var(--muted);font-size:.9rem}
+
+footer{display:grid;gap:14px;border-top:1px solid var(--line);padding-top:28px}
+footer p{margin:0;max-width:60ch}
+.toast{font:400 .82rem var(--mono);color:var(--accent);min-height:1.2em}
+
+@media (max-width:640px){
+  .wrap{padding-block:32px 48px;gap:56px}
+  .job{grid-template-columns:1fr;gap:4px}
+  th,td{padding:10px 12px}
+}
+@media (prefers-reduced-motion:no-preference){.btn{transition:border-color .15s}}
+</style>
+
+<main class="wrap">
+  <header class="hero">
+    <span class="label">Seattle, WA · Open to Analytics Engineering &amp; BI roles</span>
+    <h1>Ruchi Shah</h1>
+    <div class="role">Analytics Engineer · Business Intelligence · Data Engineering</div>
+    <p class="lede">I turn raw product and business data into pipelines, data models and metrics that teams trust. Over 10+ years at T-Mobile, Amazon and earlier BI teams, I've built SQL, dbt and Python pipelines on Snowflake, Redshift and Databricks, defined shared KPI layers, and run A/B tests that moved conversion and retention.</p>
+    <div class="links">
+      <a class="btn primary" href="https://www.linkedin.com/in/ruchishahr" target="_blank" rel="noopener">LinkedIn</a>
+      <button class="btn" id="copy-email" type="button">Copy email</button>
+      <span class="email" id="email-text">ruchishah2190@gmail.com</span>
+    </div>
+    <div class="toast" id="toast" aria-live="polite"></div>
+  </header>
+
+  <section aria-labelledby="impact-h">
+    <div class="sec-head"><h2 id="impact-h">Selected impact</h2><span class="label">Results from shipped work</span></div>
+    <div class="query">
+      <pre><b>select</b> outcome, change, company
+<b>from</b>   ruchi.career_impact
+<b>order by</b> end_date <b>desc</b>;</pre>
+      <div class="tbl">
+        <table>
+          <thead><tr><th>Outcome</th><th>Change</th><th>Company</th></tr></thead>
+          <tbody>
+            <tr><td>User conversion after funnel work with product, marketing and finance</td><td class="num">+20%</td><td class="co">T-Mobile</td></tr>
+            <tr><td>Retention from A/B tests on the app experience</td><td class="num">+12%</td><td class="co">T-Mobile</td></tr>
+            <tr><td>Manual reporting after building a shared KPI layer</td><td class="num">−60%</td><td class="co">T-Mobile</td></tr>
+            <tr><td>Annual savings from consolidating 10+ dashboards into QuickSight</td><td class="num">$1M+</td><td class="co">Amazon</td></tr>
+            <tr><td>Data latency after automating ETL/ELT pipelines</td><td class="num">−40%</td><td class="co">Amazon</td></tr>
+            <tr><td>Dashboard query time after redesigning Snowflake + Airflow pipelines</td><td class="num">10s → &lt;1s</td><td class="co">Ithena</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="rows">6 rows returned</div>
+    </div>
+  </section>
+
+  <section aria-labelledby="exp-h">
+    <div class="sec-head"><h2 id="exp-h">Experience</h2><span class="label">2013 – 2026</span></div>
+    <div class="log">
+      <article class="job">
+        <div class="when">May 2025 – Oct 2026</div>
+        <div>
+          <h3>Senior Business Intelligence Analyst</h3>
+          <p class="where">T-Mobile · Seattle · Product analytics for the T-Life app and web</p>
+          <ul>
+            <li>Built SQL and dbt pipelines in Snowflake that model 500M+ app events into analysis-ready tables for product and leadership dashboards.</li>
+            <li>Designed a shared KPI layer so each core metric is defined once, with Power BI and Metabase dashboards on top.</li>
+            <li>Designed and analyzed A/B tests that raised retention 12% and shaped acquisition and marketing plans.</li>
+            <li>Coached junior analysts and BI engineers on data modeling and governance.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="job">
+        <div class="when">Jul 2021 – May 2025</div>
+        <div>
+          <h3>Business Intelligence Engineer</h3>
+          <p class="where">Amazon · Seattle · Product analytics</p>
+          <ul>
+            <li>Built self-service data products for 15+ business units with one source of truth for core KPIs.</li>
+            <li>Tuned Databricks and Redshift workloads with Data Engineering, raising dataset reliability 20%.</li>
+            <li>Built forecasting and performance dashboards for financial planning and executive reviews.</li>
+            <li>Mentored 6 BI engineers on SQL optimization and modular data modeling.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="job">
+        <div class="when">Aug 2020 – Jul 2021</div>
+        <div>
+          <h3>Business Intelligence Developer</h3>
+          <p class="where">Ithena · Richmond, VA</p>
+          <ul>
+            <li>Engineered Snowflake and Airflow pipelines handling 5M+ records a month.</li>
+            <li>Built Power BI compliance dashboards that saved about 100 reporting hours a month.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="job">
+        <div class="when">Aug 2017 – Jun 2020</div>
+        <div>
+          <h3>Business Intelligence Developer</h3>
+          <p class="where">California Creative Solutions · San Diego, CA</p>
+          <ul>
+            <li>Designed SQL-based ETL frameworks that brought multiple source systems into one central warehouse.</li>
+            <li>Automated Azure pipelines and delivered Tableau dashboards for executive teams.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="job">
+        <div class="when">Mar 2013 – Jul 2015</div>
+        <div>
+          <h3>Software Engineer</h3>
+          <p class="where">Gilbarco Veeder-Root · Mumbai</p>
+          <ul>
+            <li>Wrote PostgreSQL queries and stored procedures for large data migrations; built C++ and Python modules with test-driven development.</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section aria-labelledby="skills-h">
+    <div class="sec-head"><h2 id="skills-h">Toolkit</h2></div>
+    <div class="skills">
+      <div><h3>Modeling &amp; pipelines</h3><div class="chips"><span>SQL</span><span>dbt</span><span>Python</span><span>Airflow</span><span>Dimensional modeling</span><span>ETL / ELT</span><span>Data quality</span></div></div>
+      <div><h3>Platforms</h3><div class="chips"><span>Snowflake</span><span>Redshift</span><span>Databricks</span><span>AWS</span><span>Azure</span><span>Delta Lake</span><span>PostgreSQL</span></div></div>
+      <div><h3>BI &amp; analytics</h3><div class="chips"><span>Tableau</span><span>Looker</span><span>Power BI</span><span>QuickSight</span><span>Metabase</span><span>Semantic layers</span><span>A/B testing</span><span>Forecasting</span></div></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="edu-h">
+    <div class="sec-head"><h2 id="edu-h">Education &amp; certifications</h2></div>
+    <div class="edu">
+      <ul>
+        <li><strong>MBA</strong><small>Capella University · 2026</small></li>
+        <li><strong>MS, Information Management</strong><small>Syracuse University · 2017</small></li>
+        <li><strong>BE, Electronics &amp; Telecommunication</strong><small>Mumbai University · 2012</small></li>
+      </ul>
+      <ul>
+        <li><strong>Snowflake SnowPro Core</strong></li>
+        <li><strong>Microsoft Certified: Data Analyst Associate</strong></li>
+        <li><strong>Tableau Desktop Specialist</strong></li>
+        <li><strong>Advanced Study in Data Science</strong></li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <p>I'm looking for Analytics Engineering and senior BI roles where good data models make product decisions faster. The quickest way to reach me is email or LinkedIn.</p>
+    <div class="links">
+      <a class="btn primary" href="https://www.linkedin.com/in/ruchishahr" target="_blank" rel="noopener">Message on LinkedIn</a>
+      <span class="email">ruchishah2190@gmail.com</span>
+    </div>
+  </footer>
+</main>
+
+<script>
+(function(){
+  var btn=document.getElementById('copy-email'), toast=document.getElementById('toast'), text='ruchishah2190@gmail.com';
+  function done(msg){toast.textContent=msg;setTimeout(function(){toast.textContent='';},2500);}
+  btn.addEventListener('click',function(){
+    try{
+      navigator.clipboard.writeText(text).then(function(){done('Email copied');},function(){selectIt();});
+    }catch(e){selectIt();}
+  });
+  function selectIt(){
+    var r=document.createRange(); r.selectNodeContents(document.getElementById('email-text'));
+    var s=window.getSelection(); s.removeAllRanges(); s.addRange(r);
+    done('Email selected. Press Ctrl+C or Cmd+C to copy');
+  }
+})();
+</script>
+
+</body></html>
